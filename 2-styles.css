@@ -1,0 +1,69 @@
+/* Hide the default checkbox */
+.toggle-cb {
+  display: none;
+}
+
+/* Container for the toggle */
+.toggle-label {
+  display: inline-block;
+  cursor: pointer;
+  width: 120px;
+  height: 60px;
+  position: relative;
+}
+
+/* The background track */
+.toggle-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ccc;
+  border-radius: 60px;
+  background-color: #e6e6e6;
+  transition: background-color 0.3s;
+}
+
+.toggle-inner::before {
+  content: "No";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #999;
+  transition: color 0.3s;
+}
+
+/* The switch circle */
+.toggle-switch {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 52px;
+  height: 52px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Checked state */
+.toggle-cb:checked + .toggle-label .toggle-inner {
+  background-color: #d0024b;
+  border-color: #d0024b;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner::before {
+  content: "Yes";
+  left: 25px;
+  color: white;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  transform: translateX(60px);
+  border-color: #d0024b;
+}
+

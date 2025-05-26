@@ -1,0 +1,43 @@
+/* General icon styling */
+.icon {
+  display: inline-block;
+  width: 100px;  /* Adjust based on icon size in the sprite */
+  height: 100px;
+  background-image: url('0-sprite.png');
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Specific icon positions */
+.i-html {
+  background-position: 0 0;
+}
+
+.i-css {
+  background-position: -100px 0; /* Adjust based on icon width */
+}
+
+.i-js {
+  background-position: -200px 0;
+}
+
+/* Optional styling for layout */
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+li {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+

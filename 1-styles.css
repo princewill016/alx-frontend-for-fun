@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+  position: relative;
+  color: #b3005c; /* Optional: match the screenshot color */
+  font-weight: bold;
+}
+
+/* The animated underline */
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: #b3005c; /* Same color as text */
+  transition: width 0.5s ease;
+}
+
+/* Show underline on hover */
+a:hover::after {
+  width: 100%;
+}
+
