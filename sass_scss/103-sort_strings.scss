@@ -1,0 +1,46 @@
+/* Task 16: Sort the variable $list_to_sort and print the sorted list in debug output */
+$list_to_sort: john anna zoe kim felicia carrie;
+
+// Function to sort a list of strings
+@function sort-list($list) {
+  $sorted-list: ();
+  
+  @while length($list) > 0 {
+    $smallest: nth($list, 1);
+    $smallest-index: 1;
+    
+    @for $i from 2 through length($list) {
+      $current: nth($list, $i);
+      
+      // Compare strings alphabetically
+      @if str-slice($current, 1, 1) < str-slice($smallest, 1, 1) {
+        $smallest: $current;
+        $smallest-index: $i;
+      } @else if str-slice($current, 1, 1) == str-slice($smallest, 1, 1) {
+        // If first letters are the same, compare the whole strings
+        @if $current < $smallest {
+          $smallest: $current;
+          $smallest-index: $i;
+        }
+      }
+    }
+    
+    $sorted-list: append($sorted-list, $smallest);
+    $list: set-nth($list, $smallest-index, null);
+    $new-list: ();
+    
+    @each $item in $list {
+      @if $item != null {
+        $new-list: append($new-list, $item);
+      }
+    }
+    
+    $list: $new-list;
+  }
+  
+  @return $sorted-list;
+}
+
+// Sort the list and debug output
+$sorted-list: sort-list($list_to_sort);
+@debug $sorted-list;

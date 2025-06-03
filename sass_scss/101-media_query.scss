@@ -1,0 +1,8 @@
+/* Task 14: Font sizes for h1 with media query */
+h1 {
+  font-size: 20px;
+  
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,8 @@
+/* Task 5: Text color in body and red color for first child .red elements using nested declarations */
+body {
+  color: #3D3D3D;
+  
+  > .red {
+    color: #FF0000;
+  }
+}

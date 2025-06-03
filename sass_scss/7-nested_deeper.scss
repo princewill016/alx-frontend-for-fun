@@ -1,0 +1,12 @@
+/* Task 7: Font sizes for body, h1, and h1.smaller using nested declarations */
+body {
+  font-size: 14px;
+  
+  h1 {
+    font-size: 16px;
+    
+    &.smaller {
+      font-size: 12px;
+    }
+  }
+}

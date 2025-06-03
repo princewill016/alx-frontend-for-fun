@@ -1,0 +1,9 @@
+/* Task 3: No margin/padding in body, 10px margin to p inside body using nested declarations */
+body {
+  margin: 0px;
+  padding: 0px;
+  
+  p {
+    margin: 10px;
+  }
+}

@@ -1,0 +1,8 @@
+/* Task 11: Create classes for each name using @each statement */
+@import '11-photos';
+
+@each $name in $list-names {
+  .photo-#{$name} {
+    background: image-url("photos/#{$name}.jpg") no-repeat;
+  }
+}
